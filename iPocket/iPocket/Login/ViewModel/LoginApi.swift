@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RNCryptor
 
 enum LoginApi: RequestApi {
     case imageRuleList(String)
