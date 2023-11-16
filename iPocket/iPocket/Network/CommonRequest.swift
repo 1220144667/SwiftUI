@@ -117,7 +117,9 @@ extension NetworkHandle {
             let jsonDecoder = JSONDecoder()
             modelObject = try jsonDecoder.decode(modelType, from: response)
         } catch {
-            dlog(message: error)
+            #if DEBUG
+            print(error)
+            #endif
         }
         return modelObject
     }
